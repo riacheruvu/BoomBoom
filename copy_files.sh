@@ -26,7 +26,7 @@ else
     echo "bothostname=$bothostname" >> copy_files_config.conf
     echo "ipaddr=$ipaddr" >> copy_files_config.conf
     echo "filename=$containername" >> copy_files_config.conf
-    echo "filename=$filepath" > copy_files_config.conf
+    echo "filename=$filepath" >> copy_files_config.conf
 fi
 
 read -p "Enter the file name (including extension) of the file you'd like to transfer: "  filename
