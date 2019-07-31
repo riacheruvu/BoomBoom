@@ -69,6 +69,16 @@ If you want to execute files directly on the container, you can just run the fol
 ```
 docker -H riabot.local start try_cont --interactive
 ```
-
 **Alternatively, you could just ssh into your robot, exclude the *"-H hostname.local"* parts, and execute the docker commands, and it'll work the same.**
 
+You could also do the following to inspect the files of a container (I believe this results in the changes to the container not being saved).
+
+```
+docker run -t -i container_name /bin/bash
+```
+
+You can save your changes as a new image through the following:
+
+```
+docker commit <container_id> new_image_name:tag_name(optional)
+```
