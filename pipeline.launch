@@ -1,0 +1,4 @@
+<launch>
+<node name="image_converter" pkg="mpyackage" type = "pipeline_code.py" output="screen" />
+<node name="en_Mapping" pkg="mpyackage" type = "roslaunch_py.py" output="screen" />
+</launch>
