@@ -20,7 +20,7 @@ import imutils
 import os
 import roslaunch
 
-#NEED TO CONFIRM: Use default values for trim
+#Use default values for trim for reproducibility acrosss all team members' setups
 LEFT_TRIM = 0
 RIGHT_TRIM = 0
 
@@ -70,7 +70,7 @@ class image_converter:
     gray = cv2.medianBlur(gray, 5)
     rows = gray.shape[0]
     #Implement the HoughCircles algorithm to find the duckie(s)'s heads, which are circles
-    #NEED TO CONFIRM: We found better performance when using HoughCircles on the transformed image compared to the original
+    #We found better performance when using our object detection algorithms on the transformed image compared to the original
     circles = cv2.HoughCircles(gray, cv2.HOUGH_GRADIENT, 1, rows / 8,
                                param1=100, param2=30,
                                minRadius=1, maxRadius=60)
