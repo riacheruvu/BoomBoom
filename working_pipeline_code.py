@@ -103,8 +103,8 @@ class image_converter:
         self.obj_detected = 1
     else:   
     #If no duckies are detected, we just move forward
-    print("No duckies detected")
-    self.robot.forward(75, 5.5)
+        print("No duckies detected")
+        self.robot.forward(75, 5.5)
 if __name__ == '__main__':
     ic = image_converter()
     rospy.init_node('image_converter', anonymous=True)
