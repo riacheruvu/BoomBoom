@@ -4,8 +4,6 @@ import cv2
 import numpy as np
 import imutils
 import os
-from PIL import Image
-from scipy.spatial import distance as dist
 import time
 import Robot
 import roslib
@@ -15,10 +13,6 @@ from std_msgs.msg import String, Int32
 from sensor_msgs.msg import CompressedImage
 from cv_bridge import CvBridge, CvBridgeError
 from duckietown_utils import rgb_from_ros
-import numpy as np
-import imutils
-import os
-import roslaunch
 
 #Use default values for trim for reproducibility acrosss all team members' setups
 LEFT_TRIM = 0
