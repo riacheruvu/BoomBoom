@@ -18,9 +18,9 @@ Here's the few relevant paragraphs from the [DT18 instructions on "Duckiebot Dev
 For the purposes of this project, we've chosen to build upon *rpi-duckiebot-base:master19* - this image contains most of the packages we need to complete this project.
 
 To create a Docker container with this image, I ran something similar to the following command, where boomboom is the name of my container:
-
+```
 docker -H riabot.local run -dit --privileged --name boomboom --network=host -v /data:/data duckietown/rpi-duckiebot-base:master19
-
+```
 I then saw the container pop up in my Portainer.
 
 ## How do I pull/push images from DockerHub?
