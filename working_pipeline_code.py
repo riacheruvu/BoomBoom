@@ -47,25 +47,7 @@ class image_converter:
     frame = myimage
     #Convert RGB image to BGR
     frame = cv2.cvtColor(myimage, cv2.COLOR_RGB2BGR)
-    # Convert BGR to HSV
-    hsv_blue = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-
-    # define range of yellow color in HSV
-    lower_blue = np.array([51, 97, 100])
-    upper_blue = np.array([56, 86, 100])
-
-    # Threshold the HSV image to only get yellow colors
-    mask_blue = cv2.inRange(hsv_blue, lower_blue, upper_blue)
-
-    # Optionally, we can bitwise-AND the mask and the original image
-    #We don't use this code here, but we experimented with it, and keep it for the reader's review
-    #res = cv2.bitwise_and(frame, frame, mask_blue)
-    #Convert the image from HSV to BGR
-    #res = cv2.cvtColor(res, cv2.COLOR_HSV2BGR)
-    # Here, we threshold the image further, since mask_blue is entirely black
-
-    hsv_blue[mask_blue > 0] = ([56, 86, 100])
-    #Convert the thresholded image to gray
+    #Convert the image to gray
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     gray = cv2.medianBlur(gray, 5)
     rows = gray.shape[0]
