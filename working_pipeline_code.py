@@ -94,6 +94,9 @@ class image_converter:
         print("Found duckies")
     if self.obj_detected == 0:
         #If we detect an object, we stop, move right, move a little forward, move left, and move forward again, to simulate swerving
+        #We move forward just a bit, even if we detect a duckie, to simulate real-life conditions, where cars can't stop right away
+        #before they try to swerve.
+        self.robot.forward(75, 1.0) 
         self.robot.stop()
         self.robot.right(90, 0.5)
         self.robot.forward(75, 1.0)
